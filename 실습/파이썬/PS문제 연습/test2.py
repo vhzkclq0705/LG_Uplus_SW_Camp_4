@@ -1,14 +1,15 @@
 def validate_nums(num):
-    if num < 0 or num > 10000:
-        print('잘못된 정수를 입력하였습니다. 프로그램을 종료합니다.')
-        exit()
+    while not (0 <= num <= 10000):
+        print("1과 10,000 사이의 정수를 입력하세요.")
+        num = int(input('정수를 입력하세요: '))
+    return num
 
 def isEqual(num1, num2):
     return num1 == num2
 
-num1 = int(input('첫 번째 정수를 입력하세요: '))
+num1 = int(input('정수를 입력하세요: '))
 validate_nums(num1)
-num2 = int(input('두 번째 정수를 입력하세요: '))
+num2 = int(input('정수를 입력하세요: '))
 validate_nums(num2)
 
 result = isEqual(num1, num2)
